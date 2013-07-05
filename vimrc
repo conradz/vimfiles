@@ -9,3 +9,9 @@ set expandtab
 set background=dark
 colorscheme solarized
 
+if has("gui_running")
+    set guifont=Source\ Code\ Pro:h12
+    set guioptions=e
+    au GUIEnter * simalt ~x
+endif
+
