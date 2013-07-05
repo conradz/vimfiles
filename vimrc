@@ -9,6 +9,8 @@ set expandtab
 set background=dark
 colorscheme solarized
 
+nnoremap <C-w>N :vsplit<CR>
+
 if has("gui_running")
     set guifont=Source\ Code\ Pro:h12
     set guioptions=e
