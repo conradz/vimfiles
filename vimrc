@@ -12,9 +12,6 @@ set shortmess=aI
 
 set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ make\ -C\ ..
 
-set background=dark
-colorscheme solarized
-
 nnoremap <C-w>N :vsplit<CR>
 
 if has("gui_running")
@@ -30,5 +27,5 @@ else
     let g:solarized_termcolors=256
 endif
 
-set background=dark
 colorscheme solarized
+set background=dark
