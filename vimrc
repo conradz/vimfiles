@@ -6,12 +6,26 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 
+set nobackup
+set noswapfile
+set shortmess=aI
+
+set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ make\ -C\ ..
+
+set background=dark
+colorscheme solarized
+
 nnoremap <C-w>N :vsplit<CR>
 
 if has("gui_running")
-    set guifont=Source\ Code\ Pro:h12
+    if has("win32")
+        set guifont=Source\ Code\ Pro:h12
+        au GUIEnter * simalt ~x
+    else
+        set guifont=Source\ Code\ Pro\ 12
+        set lines=45 columns=175
+    endif
     set guioptions=e
-    au GUIEnter * simalt ~x
 else
     let g:solarized_termcolors=256
 endif
