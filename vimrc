@@ -24,7 +24,9 @@ if has("gui_running")
     endif
     set guioptions=e
 else
-    let g:solarized_termcolors=256
+    if !has("win32")
+        let g:solarized_termcolors=256
+    endif
 endif
 
 colorscheme solarized
