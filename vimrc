@@ -29,5 +29,7 @@ else
     endif
 endif
 
-colorscheme solarized
+colorscheme torte
+set vb t_vb=
 set background=dark
+highlight Normal ctermbg=NONE
