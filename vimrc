@@ -10,9 +10,10 @@ set nobackup
 set noswapfile
 set shortmess=aI
 
-set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ make\ -C\ ..
+nnoremap <C-w>N :vsplit<CR><C-w>l
 
-nnoremap <C-w>N :vsplit<CR>
+set background=light
+colorscheme solarized
 
 if has("gui_running")
     if has("win32")
@@ -24,12 +25,17 @@ if has("gui_running")
     endif
     set guioptions=e
 else
-    if !has("win32")
-        let g:solarized_termcolors=256
-    endif
+    let g:solarized_termtrans=1
+    " if !has("win32")
+    "     let g:solarized_termcolors=256
+    " endif
 endif
 
-colorscheme torte
 set vb t_vb=
-set background=dark
+set fillchars=
 highlight Normal ctermbg=NONE
+highlight StatusLine ctermbg=black ctermfg=white
+highlight StatusLineNC ctermbg=blue ctermfg=white
+highlight VertSplit ctermbg=white ctermfg=white
+
+au BufNewFile,BufRead *.hbs set filetype=html
